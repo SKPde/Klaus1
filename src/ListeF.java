@@ -27,7 +27,7 @@ public class ListeF {
 		}
 		if(anzahl > 1) {
 			for(int x = 0; x < anzahl-1; x++) {
-				if(element[x].compareTo(element[x+1]) < 0) {
+				if(element[x+1].compareTo(element[x]) < 0) {
 					Comparable temp1 = element[x];
 					Comparable temp2 = element[x+1];
 					element[x] = temp2;
