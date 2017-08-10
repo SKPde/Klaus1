@@ -10,7 +10,7 @@ public class ListeF {
 
 	public void sortedInsert(Comparable o) {
 
-		//Comparable[] temp = new Comparable[element.length];
+		// Comparable[] temp = new Comparable[element.length];
 
 		if (lastIndex >= element.length - 1) {
 			throw new RuntimeException("Liste Voll! Bitte keine weiteren Elemente mehr einfügen.");
@@ -20,18 +20,20 @@ public class ListeF {
 		element[lastIndex] = o;
 
 		int anzahl = 0;
-		for(int x = 0; x < element.length; x++) {
-			if(element[x] != null) {
+		for (int x = 0; x < element.length; x++) {
+			if (element[x] != null) {
 				anzahl++;
 			}
 		}
-		if(anzahl > 1) {
-			for(int x = 0; x < anzahl-1; x++) {
-				if(element[x+1].compareTo(element[x]) < 0) {
-					Comparable temp1 = element[x];
-					Comparable temp2 = element[x+1];
-					element[x] = temp2;
-					element[x+1] = temp1;
+		if (anzahl > 1) {
+			for (int y = 0; y < anzahl - 1; y++) {
+				for (int x = 0; x < anzahl - 1; x++) {
+					if (element[x + 1].compareTo(element[x]) < 0) {
+						Comparable temp1 = element[x];
+						Comparable temp2 = element[x + 1];
+						element[x] = temp2;
+						element[x + 1] = temp1;
+					}
 				}
 			}
 		}
