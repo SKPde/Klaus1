@@ -10,6 +10,11 @@ public class ListeF {
 
 	public void sortedInsert(Comparable o) {
 		// sortiert einf ̈ugen
+		if(lastIndex >= element.length-1) {
+			throw new RuntimeException("Liste Voll! Bitte keine weiteren Elemente mehr einfügen.");
+		} else {
+			
+		}
 
 	}
 
